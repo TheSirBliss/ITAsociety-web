@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'; // Importiamo Head per la SEO
+
+// --- COMPONENTI UI E UTILS ---
 
 export const Logo = () => (
     <a href="#" className="font-bold text-2xl tracking-tighter">
@@ -14,17 +15,6 @@ export const GlassCard = ({ children, className }) => (
         {children}
     </div>
 );
-
-export const SectionTitle = ({ subtitle, title, description }) => {
-    const [ref, style] = useScrollReveal();
-    return (
-        <div ref={ref} style={style} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-base font-semibold leading-7 text-green-400 font-mono">{subtitle}</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl font-orbitron">{title}</p>
-            <p className="mt-6 text-lg leading-8 text-gray-400">{description}</p>
-        </div>
-    );
-};
 
 export const useScrollReveal = () => {
     const ref = useRef(null);
@@ -46,6 +36,17 @@ export const useScrollReveal = () => {
         transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
     };
     return [ref, style];
+};
+
+export const SectionTitle = ({ subtitle, title, description }) => {
+    const [ref, style] = useScrollReveal();
+    return (
+        <div ref={ref} style={style} className="text-center max-w-3xl mx-auto">
+            <h2 className="text-base font-semibold leading-7 text-green-400 font-mono">{subtitle}</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl font-orbitron">{title}</p>
+            <p className="mt-6 text-lg leading-8 text-gray-400">{description}</p>
+        </div>
+    );
 };
 
 export const ThreeJSBackground = () => {
