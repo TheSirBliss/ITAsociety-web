@@ -1,0 +1,50 @@
+/* Import di Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definizione delle variabili dei font e dei colori di base */
+body {
+  font-family: 'Inter', 'Exo 2', sans-serif;
+  background-color: #050816;
+  color: #e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classi personalizzate per il design */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.glass-card {
+  background: rgba(21, 16, 48, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 242, 234, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #4ade80, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #4ade80, #3b82f6);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(74, 222, 128, 0.6);
+}
