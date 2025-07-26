@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Head from 'next/head'; // Importiamo Head per la SEO
+
 export const Logo = () => (
     <a href="#" className="font-bold text-2xl tracking-tighter">
-        <span className="text-green-500">IT</span>
-        <span className="text-white">A</span>
-        <span className="text-red-500">Society</span>
+        <span className="text-green-500">ITA</span>
+        <span className="text-white">S</span>
+        <span className="text-red-500">ociety</span>
     </a>
 );
 
@@ -76,6 +78,7 @@ export const ThreeJSBackground = () => {
             const clock = new THREE.Clock();
             const animate = () => {
                 animationFrameId = requestAnimationFrame(animate);
+                if(!group || !renderer) return;
                 const elapsedTime = clock.getElapsedTime();
                 group.rotation.y = .1 * elapsedTime + (mouseX * 0.0005);
                 renderer.render(scene, camera);
