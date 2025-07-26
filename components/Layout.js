@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'; // IMPORT PRINCIPALE
 import Head from 'next/head'; // IMPORT PER LA SEO
 
 export const Layout = ({ children }) => {
-  // Caricamento dei Google Fonts
   useEffect(() => {
     const fontLink = document.createElement('link');
     fontLink.href = "https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap";
@@ -19,26 +18,18 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        {/* --- SEO E METADATA FONDAMENTALI --- */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Inserisci qui il tuo favicon. Puoi generarlo su siti come realfavicongenerator.net */}
         <link rel="icon" href="/favicon.ico" /> 
-        
         <title>ITAsociety | AI-Powered Problem Solving & Innovation</title>
         <meta name="description" content="Trasformiamo problemi complessi in vantaggi competitivi attraverso AI e architetture software d'avanguardia. L'intelligenza artificiale al servizio dell'uomo." />
         <meta name="keywords" content="Intelligenza Artificiale, Sviluppo Software, Architettura Software, Problem Solving, Innovazione, ITAsociety, Automotive AI" />
         <meta name="author" content="ITAsociety" />
-
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.itasociety.com/" />
         <meta property="og:title" content="ITAsociety | AI-Powered Problem Solving & Innovation" />
         <meta property="og:description" content="Il Futuro è una Sfida. Noi la Risolviamo." />
         <meta property="og:image" content="https://storage.googleapis.com/files.alkymi.cloud/itasociety_social_preview.png" />
-
-        {/* Twitter Card */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.itasociety.com/" />
         <meta property="twitter:title" content="ITAsociety | AI-Powered Problem Solving & Innovation" />
