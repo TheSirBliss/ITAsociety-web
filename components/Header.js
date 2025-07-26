@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'; // Importiamo Head per la SEO
+import React, { useState, useEffect } from 'react';
+import { Logo } from './UI'; // <-- IMPORT CORRETTO
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
