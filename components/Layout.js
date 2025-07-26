@@ -1,9 +1,6 @@
-// --- COMPONENTE: Layout.js ---
-/**
- * Definisce la struttura base della pagina (Header, contenuto principale, Footer).
- * @param {object} props - Le props del componente.
- * @param {React.ReactNode} props.children - I componenti figli da renderizzare.
- */
+import React, { useState, useEffect, useRef } from 'react'; // IMPORT PRINCIPALE
+import Head from 'next/head'; // IMPORT PER LA SEO
+
 export const Layout = ({ children }) => {
   // Caricamento dei Google Fonts
   useEffect(() => {
