@@ -50,6 +50,12 @@ export const ServicesSection = () => {
             solution: "Una piattaforma di cybersecurity che non aspetta l'attacco. Sentinel usa l'AI per analizzare costantemente le minacce e identificare le vulnerabilità.",
             image: "https://placehold.co/600x400/050816/915eff?text=Sentinel+AI",
         },
+        {
+            title: "Creamio Business Nexus",
+            problem: "Le aziende possiedono enormi quantità di dati, ma faticano a trasformarli in decisioni strategiche e crescita reale.",
+            solution: "Un hub di strumenti intelligenti che unifica analisi, gestione e crescita. Trasformiamo i dati in efficienza e profitto.",
+            image: "https://placehold.co/600x400/050816/FFFFFF?text=Creamio+Nexus",
+        },
     ];
     return (
         <section id="servizi" ref={ref} style={style} className="py-20 sm:py-28 bg-bg-color/80 backdrop-blur-sm">
@@ -105,17 +111,21 @@ export const TeamSection = () => {
         { name: "Senior AI/ML Engineer", role: "Pioniere dell'Intelligenza", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" },
         { name: "Senior Business Strategist", role: "Costruttore di Imperi", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
         { name: "Senior UX/UI Designer", role: "Designer di Esperienze", img: "https://images.unsplash.com/photo-1581391623493-713d2f7517a6?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior DevOps Engineer", role: "Ingegnere della Scalabilità", img: "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Data Scientist", role: "Traduttore di Dati", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Clinical Psychologist", role: "Esperto Comportamentale", img: "https://images.unsplash.com/photo-1581090122119-e33814e3b3d5?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Marketing Director", role: "Stratega del Brand", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=200&auto=format&fit=crop" },
     ];
     return (
         <section id="team" ref={ref} style={style} className="py-20 sm:py-28 bg-transparent">
             <div className="container mx-auto px-4">
                 <h2 className="section-title">Le Menti Dietro la Rivoluzione</h2>
                 <p className="section-subtitle">L'innovazione richiede un'alchimia di competenze. Il nostro team è unito per risolvere la tua prossima grande sfida.</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                     {teamMembers.map(member => (
                         <div key={member.name} className="team-card text-center glass-card rounded-2xl p-4 transition-all duration-300 hover:border-primary hover:-translate-y-2">
                            <img className="mx-auto h-24 w-24 rounded-full border-2 border-primary object-cover mb-4" src={member.img} alt={`Foto di ${member.name}`} />
-                            <h3 className="text-md font-bold text-white">{member.name}</h3>
+                            <h3 className="text-md font-bold text-white leading-tight">{member.name}</h3>
                             <p className="font-semibold text-sm" style={{color: 'var(--primary-color)'}}>{member.role}</p>
                         </div>
                     ))}
