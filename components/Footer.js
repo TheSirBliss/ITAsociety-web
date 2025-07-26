@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'; // Importiamo Head per la SEO
+import React from 'react';
 
 export const Footer = () => (
     <footer className="bg-black border-t border-gray-800">
