@@ -82,3 +82,61 @@ export const ServicesSection = () => {
         </section>
     );
 };
+
+export const InnovationsSection = () => {
+    const [ref, style] = useScrollReveal();
+    return (
+        <section id="innovazioni" ref={ref} style={style} className="py-20 sm:py-28">
+            <div className="container mx-auto px-4">
+                <h2 className="section-title">Guardiamo Oltre l'Orizzonte</h2>
+                <p className="section-subtitle">La nostra divisione R&D esplora le frontiere della tecnologia per trasformare la fantascienza in realtà aziendale.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="glass-card rounded-2xl p-8">
+                        <h3 className="font-orbitron text-3xl font-bold mb-4 hero-gradient-text">Dream Recorder</h3>
+                        <p className="text-text-muted-color">In collaborazione con ricercatori del MIT, stiamo sviluppando una tecnologia rivoluzionaria per visualizzare e analizzare l'attività cerebrale durante le fasi oniriche, ipnotiche e meditative.</p>
+                    </div>
+                    <div className="glass-card rounded-2xl p-8">
+                        <h3 className="font-orbitron text-3xl font-bold mb-4 hero-gradient-text">Holo Revolution</h3>
+                        <p className="text-text-muted-color">La nostra ricerca si concentra sullo sviluppo di proiezioni olografiche interattive di nuova generazione per la prototipazione virtuale nel settore automotive, la formazione medica e la collaborazione remota.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export const TeamSection = () => {
+    const [ref, style] = useScrollReveal();
+    const teamMembers = [
+        { name: "Senior Full-Stack Developer & Software Architect", role: "Architetto del Futuro Digitale", img: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior DevOps Engineer & Cloud Architect", role: "Ingegnere della Scalabilità", img: "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior AI/ML Engineer & Research Scientist", role: "Pioniere dell'Intelligenza", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Data Scientist & Analytics Expert", role: "Traduttore di Dati", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Business Strategist & C-Level Advisor", role: "Costruttore di Imperi Digitali", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Clinical Psychologist & Behavioral Expert", role: "Esperto Comportamentale", img: "https://images.unsplash.com/photo-1581090122119-e33814e3b3d5?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Marketing Director & Brand Strategist", role: "Stratega del Brand", img: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Sales Director & Customer Success Expert", role: "Architetto delle Relazioni", img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior UX/UI Designer & Product Design Lead", role: "Designer di Esperienze", img: "https://images.unsplash.com/photo-1581391623493-713d2f7517a6?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Automotive Engineer & Innovation Expert", role: "Ingegnere della Rivoluzione", img: "https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Game Designer & Unreal Engine Specialist", role: "Creatore di Mondi Virtuali", img: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=200&auto=format&fit=crop" },
+        { name: "3D Artist & MetaHuman Specialist", role: "Artista del Digitale", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" },
+        { name: "Senior Innovation Strategist & R&D Expert", role: "Catalizzatore di Breakthrough", img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=200&auto=format&fit=crop" },
+    ];
+    return (
+        <section id="team" ref={ref} style={style} className="py-20 sm:py-28">
+            <div className="container mx-auto px-4">
+                <h2 className="section-title">Le Menti Dietro la Rivoluzione</h2>
+                <p className="section-subtitle">L'innovazione richiede un'alchimia di competenze. Il nostro team è composto da veterani del settore tecnologico e strateghi di mercato, uniti per un unico scopo: risolvere la tua prossima grande sfida.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {teamMembers.map(member => (
+                        <div key={member.name} className="team-card text-center glass-card rounded-2xl p-6 transition-all duration-300 hover:border-primary hover:-translate-y-2">
+                           <img className="mx-auto h-28 w-28 rounded-full border-2 border-primary object-cover mb-4" src={member.img} alt={`Foto di ${member.name}`} />
+                            <h3 className="text-lg font-bold text-white">{member.name}</h3>
+                            <p className="font-semibold text-primary">{member.role}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
