@@ -27,7 +27,7 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
-/* Componenti personalizzati */
+/* Componenti personalizzati per un look professionale */
 @layer components {
     .section-title {
         @apply font-orbitron text-center mb-4 text-4xl font-bold text-white md:text-5xl;
@@ -47,13 +47,6 @@ body {
     .cta-button:hover {
         transform: scale(1.05);
         box-shadow: 0 0 35px rgba(0, 242, 234, 0.6), 0 0 35px rgba(145, 94, 255, 0.6);
-    }
-    
-    .glass-card {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
     }
 }
 
