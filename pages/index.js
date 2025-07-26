@@ -2,9 +2,10 @@ import React from 'react';
 import {
   HeroSection,
   ServicesSection,
+  InnovationsSection, // <-- Aggiunta la sezione mancante
   TeamSection,
 } from '../components/HomePageSections';
-import { ContactSection } from '../components/ContactSection'; // <-- IMPORT AGGIORNATO
+import { ContactSection } from '../components/ContactSection';
 
 /**
  * Componente per la pagina principale (Homepage).
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ServicesSection />
+      <InnovationsSection /> {/* <-- Aggiunta la sezione mancante */}
       <TeamSection />
       <ContactSection />
     </>
