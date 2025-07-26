@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head'; // Importiamo Head per la SEO
 
+import React, { useState, useEffect, useRef } from 'react';
+import Head from 'next/head'; // Importiamo Head per la SEO
+
 export const ContactSection = () => {
     const [ref, style] = useScrollReveal();
     return (
@@ -14,7 +17,6 @@ export const ContactSection = () => {
                         </p>
                     </div>
                     <div className="contact-form">
-                        {/* Sostituisci l'URL con il tuo endpoint di Formspree */}
                         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                             <input className="w-full p-3 mb-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500" type="text" name="name" placeholder="Il tuo nome" required />
                             <input className="w-full p-3 mb-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500" type="email" name="email" placeholder="La tua email" required />
