@@ -1,15 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'; // Importiamo Head per la SEO
-
-import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head'; // Importiamo Head per la SEO
+import React from 'react';
+import { GlassCard, SectionTitle, useScrollReveal } from './UI';
 
 export const ContactSection = () => {
     const [ref, style] = useScrollReveal();
     return (
         <section id="contatti" className="py-20 sm:py-28">
             <div ref={ref} style={style} className="container mx-auto px-4">
-                <div className="contact-layout max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-2xl">
+                <div className="max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-2xl grid md:grid-cols-2 gap-8 items-center">
                     <div className="contact-info text-center md:text-left">
                         <h3 className="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4">Hai una sfida per noi?</h3>
                         <p className="text-gray-400 leading-relaxed">
