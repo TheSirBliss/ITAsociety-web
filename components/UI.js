@@ -4,9 +4,16 @@ import React, { useState, useEffect, useRef } from 'react';
 
 export const Logo = () => (
     <a href="#" className="font-bold text-2xl tracking-tighter">
-        <span className="text-green-500">ITA</span>
-        <span className="text-white">S</span>
-        <span className="text-red-500">ociety</span>
+        <span className="text-green-500">IT</span>
+        <span className="text-white">A</span>
+        <span className="text-red-500">Society</span>
+    </a>
+);
+
+// --- CORREZIONE: Aggiunto il componente CTAButton mancante ---
+export const CTAButton = ({ children, href = "#" }) => (
+    <a href={href} className="cta-button">
+        {children}
     </a>
 );
 
