@@ -1,22 +1,24 @@
 import React from 'react';
 import {
   HeroSection,
+  MissionSection,
   ServicesSection,
-  InnovationsSection, // <-- Assicurati che sia importato
+  InnovationsSection,
   TeamSection,
 } from '../components/HomePageSections';
 import { ContactSection } from '../components/ContactSection';
 
 /**
  * Componente per la pagina principale (Homepage).
- * Assembla le varie sezioni importate per costruire la pagina.
+ * Assembla tutte le sezioni importate per costruire la pagina completa.
  */
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <MissionSection />
       <ServicesSection />
-      <InnovationsSection /> {/* <-- E che sia renderizzato qui */}
+      <InnovationsSection />
       <TeamSection />
       <ContactSection />
     </>
