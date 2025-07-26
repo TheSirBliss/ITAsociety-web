@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import { Header } from './Header'; // <-- IMPORT CORRETTO
-import { Footer } from './Footer'; // <-- IMPORT CORRETTO
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { ThreeJSBackground } from './UI'; // Importa lo sfondo 3D
 
 export const Layout = ({ children }) => {
   useEffect(() => {
@@ -39,9 +40,15 @@ export const Layout = ({ children }) => {
         <meta property="twitter:image" content="https://storage.googleapis.com/files.alkymi.cloud/itasociety_social_preview.png" />
       </Head>
       
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      {/* Lo sfondo 3D ora è globale e sta dietro a tutto */}
+      <ThreeJSBackground />
+
+      {/* Un wrapper gestisce la posizione del contenuto sopra lo sfondo */}
+      <div className="relative z-10">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };
